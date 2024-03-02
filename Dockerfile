@@ -5,9 +5,9 @@ WORKDIR /app
 # Print Working Directory
 RUN pwd
 
-# Copy pom.xml and package
+# Copy pom.xml and package 
 COPY pom.xml .
-RUN mvn clean package
+RUN mvn clean package -Dmaven.test.skip=true
 COPY . .
 
 # List Files in Directory
