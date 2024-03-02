@@ -6,7 +6,7 @@ WORKDIR /app
 RUN pwd
 
 # Copy pom.xml and package
-COPY project_util_2/internal_api_list/pom.xml .
+COPY pom.xml .
 RUN mvn clean package
 COPY . .
 
@@ -32,7 +32,7 @@ WORKDIR /app
 RUN ls -l /app
 
 # Copy built JAR from the build stage
-COPY --from=build /app/target/internal_api_list-0.0.1-SNAPSHOT.jar /app/target/internal_api_list.jar
+COPY --from=build /app/target/internal_app-0.0.1-SNAPSHOT.jar /app/target/internal_app.jar
 
 
 # List Contents of target directory
@@ -44,4 +44,4 @@ RUN ls -l /app/target
 EXPOSE 8080
 
 # Entry point
-ENTRYPOINT ["java", "-jar", "/app/target/internal_api_list.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/internal_app.jar"]
