@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.api_list</groupId>
-	<artifactId>internal_app</artifactId>
+	<artifactId>internal_api_list</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>internal_app</name>
+	<name>internal_api_list</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
